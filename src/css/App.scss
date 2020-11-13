@@ -1,0 +1,108 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
+
+@import './navbar';
+@import './darkMode';
+@import './articlePick';
+@import './svgStyling';
+
+
+
+// This app was designed for mobile first 
+
+
+// Here are all the utility classes
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+}
+
+body {
+  background: tomato;
+}
+
+
+
+// changing the scrollbar display
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #141418;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: tomato;
+}
+
+
+
+  // sidenote
+  // A rem is a unit that is relative to the font-size on the root element
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+p,
+a {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;  
+    }
+}
+
+.mainText {
+    max-width: 500px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+
+
+
+
+// Media queries for larger screens
+// This app was designed for mobile first 
+
+// Small screens 
+@media only screen and (max-width: 600px) {
+    main {
+        margin-left: 0px;
+        margin-bottom: 70px;
+    }
+    .mainText {
+        max-width: 500px;
+    }
+}
+
+// large screens
+@media only screen and (min-width: 600px) {
+    main {
+        height: auto;
+    }
+}
+
+
+
+

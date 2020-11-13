@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+// Nian cat squares
+
+.square1 {
+  background: url('../../src/img/nian.gif');
+  border-radius: 3px;
+  height: 300px;
+  margin: 100px;
+  position: absolute;
+  transition: transform 0.8s;
+  width: 300px;
+}
+
+.square2 {
+  align-items: center;
+  background: #1a202c;
+  border-radius: 3px;
+  height: 300px;
+  margin: 100px;
+  transition: transform 2s;
+  position: absolute;
+  width: 300px;
+  &:hover {
+    transform: translate(320px, 0px);
+  }
+}
+
+// Styling for the text in the squares
+
+.articlePicker {
+  p {
+    color: #fff;
+    text-shadow: 2px 1px tomato;
+    font-size: 50px;
+    padding: 5px;
+    align-items: center;
+
+    &:hover {
+      color: tomato;
+      padding: 1px;
+      text-shadow: 2px 1px white;
+    }
+  }
+}
+.header {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 1px rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  font-family: 'Goldman', cursive;
+  padding: 10px;
+}
+
+h1 span::before {
+  content: '';
+  animation: profile 7s infinite;
+}
+
+@keyframes profile {
+  0% {
+    content: 'students';
+  }
+
+  40% {
+    content: 'trolls';
+  }
+
+  70% {
+    content: 'russian hackers';
+  }
+  100% {
+    content: 'robot pandas';
+  }
+}
+
+// Media queries for larger screens
+// This app was designed for mobile first
+
+// Small screens
+@media only screen and (max-width: 600px) {
+  .square1 {
+    display: none;
+  }
+
+  .square2 {
+    height: 170px;
+    margin: 50px;
+    width: 200px;
+  }
+
+  .articlePicker {
+    p {
+      font-size: 30px;
+      padding: 5px;
+    }
+  }
+}
+

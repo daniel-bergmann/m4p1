@@ -1,0 +1,65 @@
+// Darkmode styles
+
+// dark mode styling
+
+
+// makes the transition slow and easy
+
+main {
+  transition: background-color 0.4s ease-in;
+  margin-left: 0;
+}
+
+// container for the button
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+#toggle {
+  width: 50px;
+  padding: 5px;
+  background-color: #1a202c;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px -10px #1e1e24;
+  transition: background-color 0.2s ease-in;
+
+  .toggle-inner {
+    width: 20px;
+    height: 15px;
+    background-color: tomato;
+    border-radius: 5px;
+    transition: margin-left 0.2s ease-in, background-color 0.2s ease-in;
+
+    &.toggle-active {
+      margin-left: 20px;
+    }
+  }
+}
+
+// Dark Mode styling
+
+.dark-mode {
+  color: rgb(172, 172, 172);
+
+  a {
+
+    // The a tag is inheriting the color in the site
+    color: inherit;
+  }
+
+  main {
+    background-color: #23232e;
+  }
+
+  #toggle {
+    background-color: white;
+
+    .toggle-inner {
+      background-color: tomato;
+    }
+  }
+}

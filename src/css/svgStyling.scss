@@ -1,0 +1,58 @@
+
+
+// Styling for the SVG
+
+
+// the huge bbrowser animation
+
+
+#browseritem {
+  animation: browseritem 5s ease infinite;
+}
+
+@keyframes browseritem {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  50% {
+    transform: translate(0px,50px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+
+// styiling for the person animation
+
+#person {
+  animation: person 4s ease;
+}
+
+@keyframes person {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  10% {
+    transform: translate(60px,0px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+
+// Media queries for larger screens
+// This app was designed for mobile first 
+
+// Small screens 
+@media only screen and (max-width: 600px) {
+    svg {
+      height: 300px;
+      width: 300px;
+    }
+}

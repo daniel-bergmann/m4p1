@@ -1,0 +1,174 @@
+
+// This app was designed for mobile first 
+
+
+// Trying out the CSS variables
+:root {
+  font-size: 16px;
+
+  // Declaring CSS variables
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 900ms;
+}
+
+
+
+
+// styling the navbar
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+    //   Placing transition on the navbar element
+  transition: width 200ms ease;
+}
+
+
+
+
+// centering the elements
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+// Styling the buttons in the nav
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    .icon {
+        font-size: 30px;
+        color: tomato;
+    }
+
+
+
+
+    // this makes the icons change color when hovered
+    // filter property
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+
+    &:hover {
+    filter: grayscale(0%) opacity(1);
+    color: var(--text-secondary);
+}
+
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link i {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+
+
+
+// hovering pulls the navbar to the right and makes it display as block
+
+.navbar:hover {
+    width: 18rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+
+
+
+
+// This makes the logo have a float in space kind of feeling
+// making it rotate with transition
+
+.logo .icon {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+
+.navbar:hover .logo .icon {
+    transform: rotate(-180deg);
+}
+
+
+
+
+
+
+
+// Media queries for larger screens
+// This app was designed for mobile first 
+
+// Small screens 
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+        
+    }
+
+}
+
+// large screens
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
+}
