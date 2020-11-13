@@ -4,6 +4,10 @@ This project was bootstrapped with create react app and has been bundled with ba
 
 In this project I have made a website that displays tech articles about various things and animations.
 
+
+link to site:
+lame-machine.surge.sh
+
 there is a dark mode toggle.
 
 I made a seperate file containing the article data and imported the data with ES6 modules into components.
