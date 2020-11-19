@@ -1,6 +1,6 @@
 A project in the Reykjavik academy of web development 
 
-This project was bootstrapped with create react app and has been bundled with babel.
+This project was bootstrapped with create react app and has been bundled with webpack.
 
 In this project I have made a website that displays tech articles about various things and animations.
 
