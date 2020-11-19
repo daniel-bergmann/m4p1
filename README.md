@@ -2,6 +2,8 @@ A project in the Reykjavik academy of web development
 
 This project was bootstrapped with npm create-react-app and has been bundled with webpack.
 
+the bundled files can be found in the build folder.
+
 In this project I have made a website that displays tech articles about various things and animations.
 
 
